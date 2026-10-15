@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiesel: The Plant-Powered Renewable Fuel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-emerald-900 text-white py-16 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <span class="bg-emerald-800 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Scientific Project & Exploration</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6">Biodiesel: Powering Engines from Plant Lipids</h1>
+            <p class="text-lg md:text-xl text-emerald-100 max-w-2xl leading-relaxed">
+                An advanced interactive exploration into how vegetable oils are chemically converted into high-performance, carbon-neutral alternative fuels.
+            </p>
+        </div>
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-emerald-800/40 rounded-full blur-3xl pointer-events-none"></div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Introduction / Real Photo Section -->
+        <section class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">What is Biodiesel?</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Biodiesel is an alternative fuel produced from renewable biological resources such as vegetable oils (soybean, canola, palm), animal fats, or recycled cooking grease. 
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    From a chemistry standpoint, it is comprised of long-chain <strong>fatty acid methyl esters (FAME)</strong>. It is designed to match standard petroleum diesel in compression-ignition combustion performance while drastically cutting net greenhouse gas emissions.
+                </p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md">
+                <!-- Updated reliable image URL for agricultural crop fields -->
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Rapeseed agricultural field" class="w-full h-64 object-cover">
+                <p class="text-xs text-slate-500 p-2 bg-slate-50 italic text-center">Agricultural crop fields—a prominent raw renewable feedstock source.</p>
+            </div>
+        </section>
+
+        <!-- Scientific Chemistry Section & Diagram -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">The Chemistry: Transesterification</h2>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                Plant oils in their raw form are too viscous (thick) to burn smoothly in standard engines. To solve this, chemists use a catalytic reaction called <strong>transesterification</strong>. Triglycerides react with a short-chain alcohol (like methanol) in the presence of a catalyst (such as sodium hydroxide) to split the molecules into FAME (biodiesel) and glycerin.
+            </p>
+            <div class="rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-slate-50 p-4">
+                <!-- Updated reliable image URL for laboratory chemistry setup -->
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" alt="Laboratory chemistry setup for biofuel processing" class="w-full h-64 object-cover rounded-lg">
+                <p class="text-xs text-slate-500 mt-3 text-center italic">Figure 1: Laboratory synthesis environment used for analyzing and refining alternative biofuels.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Process Simulator -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Step-by-Step Pipeline</h2>
+            <p class="text-slate-500 text-sm mb-6">Click each phase below to inspect the scientific milestones.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <button onclick="showStep(1)" id="btn-1" class="p-4 rounded-xl text-left font-semibold text-sm transition-all bg-emerald-600 text-white shadow-sm">1. Feedstock</button>
+                <button onclick="showStep(2)" id="btn-2" class="p-4 rounded-xl text-left font-semibold text-sm transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">2. Extraction</button>
+                <button onclick="showStep(3)" id="btn-3" class="p-4 rounded-xl text-left font-semibold text-sm transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">3. Transesterification</button>
+                <button onclick="showStep(4)" id="btn-4" class="p-4 rounded-xl text-left font-semibold text-sm transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">4. Combustion</button>
+            </div>
+
+            <div id="step-content" class="bg-emerald-50/50 p-6 rounded-xl border border-emerald-100 min-h-[140px] flex flex-col justify-center">
+                <h3 id="step-title" class="text-lg font-bold text-emerald-900 mb-2">Phase 1: Feedstock Cultivation</h3>
+                <p id="step-desc" class="text-emerald-800 text-sm leading-relaxed">
+                    Plants capture sunlight and carbon dioxide, synthesizing triglycerides. Advanced research also utilizes microalgae grown in controlled bioreactors.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Carbon Offset Calculator</h2>
+            <p class="text-slate-500 text-sm mb-6">Estimate greenhouse gas savings when replacing fossil fuel with plant-based biodiesel.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Diesel Replaced per Year: <span id="liters-val" class="font-bold text-emerald-700">1,000</span> Liters</label>
+                        <input type="range" id="liters-input" min="100" max="10000" step="100" value="1000" oninput="calculateSavings()" class="w-full accent-emerald-600">
+                    </div>
+                    <p class="text-xs text-slate-500">Note: Biodiesel cuts net lifecycle carbon emissions by roughly 78% compared to petroleum diesel.</p>
+                </div>
+                <div class="bg-emerald-900 text-white p-6 rounded-xl text-center flex flex-col justify-center">
+                    <span class="text-xs text-emerald-300 uppercase tracking-widest font-semibold">Estimated CO2 Saved</span>
+                    <span id="co2-result" class="text-4xl font-extrabold my-2">2.1 Tons</span>
+                    <span class="text-xs text-emerald-200">Equivalent to planting ~35 tree seedlings grown for 10 years!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Myth vs Science Grid -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Myth vs. Scientific Reality</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-rose-600 font-bold text-xs uppercase tracking-wider bg-rose-50 px-2.5 py-1 rounded-md">Common Myth</span>
+                    <h3 class="font-bold text-slate-900 mt-3 mb-2">"Biodiesel ruins modern diesel engines."</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Unmodified engines run efficiently on standard low-level commercial blends (like B5 or B10). High-concentration blends (B20+) are widely certified for modern heavy-duty transit fleets.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-md">Scientific Fact</span>
+                    <h3 class="font-bold text-slate-900 mt-3 mb-2">"It offers enhanced fuel lubricity."</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Even small percentages of biodiesel significantly improve fuel lubricity, decreasing wear on delicate high-pressure fuel injectors relative to ultra-low sulfur petroleum diesel.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sources Section -->
+        <section class="bg-slate-100 p-6 rounded-2xl border border-slate-200 text-xs text-slate-600 space-y-2">
+            <h3 class="font-bold text-slate-700 uppercase tracking-wider mb-2">Scientific References & Sources</h3>
+            <p>1. U.S. Department of Energy (DOE) - Alternative Fuels Data Center: Biodiesel Handling and Use Guide.</p>
+            <p>2. National Biodiesel Board (NBB) - Lifecycle Emissions Analysis of Fatty Acid Methyl Esters (FAME).</p>
+            <p>3. Public domain agricultural media repository (Crop photography & laboratory assets).</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER WITH YOUR NAME -->
+    <footer class="text-center py-8 text-slate-400 text-xs border-t border-slate-200 mt-16 space-y-1">
+        <p>Scientific Educational Project • Powered by HTML5 & Tailwind CSS</p>
+        <!-- Change "Your Name Here" to your actual name -->
+        <p class="text-slate-500 font-medium">Created by: <span id="author-name" class="text-emerald-700 font-bold">Erik Gozhyi</span></p>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        const steps = [
+            {
+                title: "Phase 1: Feedstock Cultivation",
+                desc: "Plants like soybeans, sunflowers, and oil palms capture sunlight and carbon dioxide, synthesizing triglycerides. Advanced research also utilizes microalgae grown in controlled bioreactors."
+            },
+            {
+                title: "Phase 2: Mechanical & Chemical Extraction",
+                desc: "Seeds are mechanically pressed to extract crude plant oils, which are subsequently filtered and degummed to remove solid cellular impurities and phospholipids."
+            },
+            {
+                title: "Phase 3: Transesterification Reaction",
+                desc: "Triglycerides are reacted with alcohol in the presence of a catalyst, converting heavy lipids into lighter Fatty Acid Methyl Esters (Biodiesel) and separating out dense glycerin."
+            },
+            {
+                title: "Phase 4: Combustion & Power",
+                desc: "The refined biodiesel is combusted inside diesel engines. The power stroke drives pistons, while producing significantly reduced particulate matter and net-zero fossil carbon emissions."
+            }
+        ];
+
+        function showStep(stepNum) {
+            for(let i=1; i<=4; i++) {
+                const btn = document.getElementById(`btn-${i}`);
+                if(i === stepNum) {
+                    btn.className = "p-4 rounded-xl text-left font-semibold text-sm transition-all bg-emerald-600 text-white shadow-sm";
+                } else {
+                    btn.className = "p-4 rounded-xl text-left font-semibold text-sm transition-all bg-slate-100 text-slate-700 hover:bg-slate-200";
+                }
+            }
+            document.getElementById('step-title').innerText = steps[stepNum-1].title;
+            document.getElementById('step-desc').innerText = steps[stepNum-1].desc;
+        }
+
+        function calculateSavings() {
+            const liters = document.getElementById('liters-input').value;
+            document.getElementById('liters-val').innerText = Number(liters).toLocaleString();
+            const savingsKg = liters * 2.1;
+            const savingsTons = (savingsKg / 1000).toFixed(1);
+            document.getElementById('co2-result').innerText = savingsTons + " Tons";
+        }
+    </script>
+</body>
+</html>
